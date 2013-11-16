@@ -5,15 +5,14 @@ $(function() {
     // Read current data and rebuild UI.
     // If you plan to generate complex UIs like this, consider using a JavaScript templating library.
     function refreshTodoItems() {
-        var query = todoItemTable.where({ mostrar: false });
+        var query = todoItemTable.where({ mostrar: true });
 
         query.read().then(function(todoItems) {
             var listItems = $.map(todoItems, function(item) {
                 return $('<li>')
                     .attr('data-todoitem-id', item.id)
-                    //.append($('<button class="item-delete">Delete</button>'))
                     .append($('<input type="checkbox" class="item-complete">').prop('checked', item.mostrar))
-                    .append($('<div>').append($('<input class="item-text">').val(item.nombrePersonaje)));
+                    .append($('<div>').append($('<input class="item-text">').val(item.nombrePersonaje)))
                     .append($('<div>').append($('<input class="item-text">').val(item.ff)));
             });
 
