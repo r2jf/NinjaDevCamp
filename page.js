@@ -1,6 +1,6 @@
 $(function() {
     var client = new WindowsAzure.MobileServiceClient('https://ninjadevcamp.azure-mobile.net/', 'azoKgFZWNPNngJtPItMofvWpTnlvtP76'),
-        todoItemTable = client.getTable('ninja1');
+        todoItemTable = client.getTable('ninja2');
 
     // Read current data and rebuild UI.
     // If you plan to generate complex UIs like this, consider using a JavaScript templating library.
