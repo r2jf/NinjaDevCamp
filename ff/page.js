@@ -12,8 +12,7 @@ $(function() {
                 return $('<li>')
                     .attr('data-todoitem-id', item.id)
                     .append($('<input type="checkbox" class="item-complete">').prop('checked', item.mostrar))
-                    .append($('<div>').append($('<input class="item-text">').val(item.nombrePersonaje)))
-                    .append($('<div>').append($('<input class="item-text">').val(item.ff)));
+                    .append($('<div>').append($('<input class="item-text">').val(item.nombrePersonaje + ', ' + item.ff)));
             });
 
             $('#todo-items').empty().append(listItems).toggle(listItems.length > 0);
